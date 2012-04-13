@@ -1,0 +1,132 @@
+$baseline: 18px;
+$header: rgb(141, 184, 216);
+$basic: rgb(204, 204, 204);
+
+@mixin divider-gradient {
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuNiIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.3) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(50%,rgba(255,255,255,0.6)), color-stop(100%,rgba(255,255,255,0.3))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.3) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.3) 100%); /* IE10+ */
+  background: linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.3) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#4dffffff',GradientType=0 ); /* IE6-8 */
+}
+
+body {
+  background: url(../img/dinpattern-stripe.gif);
+  color: rgb(255, 255, 255);
+}
+
+p, h1, h2, address, {
+  font-family: 'Open Sans', sans-serif;
+  color: $basic;
+}
+
+#main {
+  margin-top: 60px;
+}
+
+h1 {
+  font: {
+    family: 'Reenie Beanie', cursive;
+    size: 30px;
+    weight: normal;
+  }
+  text-align: center;
+  color: rgb(0, 0, 0)
+}
+
+h2 {
+  font: {
+    size: 13px;
+    weight: normal;
+  }
+  color: $header;
+  letter-spacing: 1px;
+  line-height: $baseline;
+  margin-top: $baseline * 3;
+}
+
+footer {
+  text-align: center;
+  margin-top: $baseline * 3;
+  font-size: 12px;
+}
+
+footer address {
+  color: rgb(100, 100, 100);
+  padding-left: 10px;
+}
+
+
+.domain p, .domain h2 {
+  margin: {
+    left: 10px;
+    right: 10px;
+  }
+}
+
+section.domain {
+  position: relative;
+}
+
+.photo-frame {
+  background: {
+    color: rgb(255, 255, 255)
+  }
+  border: {
+    radius: 6px;
+  }
+  box-shadow: inset 0px 0 57px rgba(0, 0, 0, .15), 0px 0px 8px 0px rgba(255, 255, 255, .66);
+  height: 266px;
+  padding: 1px;
+
+  img {
+    display: block;
+    margin: 14px auto 15px auto;
+    background-color: white;
+  }
+  behavior: url(assets/js/PIE.htc)
+}
+
+.divider-long {
+  position: absolute;
+  top: 320px;
+  left: 230px;
+  width: 1px;
+  height: 107px;
+  @include divider-gradient;
+}
+
+.divider-short {
+  position: absolute;
+  top: 460px;
+  left: 230px;
+  width: 1px;
+  height: 71px;
+  @include divider-gradient;
+}
+
+#logo {
+  margin: {
+    top: -8px;
+    left: 20px;
+  }
+}
+
+#email {
+  margin: {
+    top: 45px;
+    left: 29px;
+  }
+  a {
+    color: $basic;
+    width: 145px;
+  }
+}
+
+.icon-envelope {
+    background-position: -72px 1px;
+}
