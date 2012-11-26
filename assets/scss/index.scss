@@ -16,7 +16,6 @@ $basic: rgb(204, 204, 204);
 
 body {
   background: url(../img/dinpattern-stripe.gif);
-  color: rgb(255, 255, 255); 
 }
 
 p, h1, h2, address, {
@@ -53,11 +52,13 @@ footer {
   text-align: center;
   margin-top: $baseline * 3;
   font-size: 12px;
+  color: rgb(100, 100, 100);
 }
 
 footer address {
-  color: rgb(100, 100, 100);
+  color: inherit;
   padding-left: 10px;
+  margin-bottom: 0;
 }
 
 
